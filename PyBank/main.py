@@ -44,29 +44,53 @@ with open(PyBank) as csvfile:
             Greatest_Decrease[1] = Revenue_Change
 
 #Average Change
-Revenue_Avg = sum(Changes_Revenue)/len(Changes_Revenue)
+
+Revenue_Avg = sum(Changes_Revenue) / len(Changes_Revenue)
+
 
 #Output
-print(f"Financial Analysis")
-print(f"---------------------------------------")
-print(f"Total Months: {Total_Months}")
-print(f"Total: ${Total_Net}")
-print(f"Avgerage Change: ${Revenue_Avg}")
-print(f"Greatest Increase in Profits: {Greatest_Increase[0]} (${Greatest_Increase[1]})")
-print(f"Greatest Decrease in Profits: {Greatest_Decrease[0]} (${Greatest_Decrease[1]})")
+#print(f"Financial Analysis")
+#print(f"---------------------------------------")
+#print(f"Total Months: {Total_Months}")
+#print(f"Total: ${Total_Net}")
+#print(f"Avgerage Change: ${Revenue_Avg}")
+#print(f"Greatest Increase in Profits: {Greatest_Increase[0]} (${Greatest_Increase[1]})")
+#print(f"Greatest Decrease in Profits: {Greatest_Decrease[0]} (${Greatest_Decrease[1]})")
 
 
 #Print Output to Text
-#Results = os.path.join('.', 'analysis')
-#with open(Results, 'w', newline='') as csvfile:
-#    csvwriter = csv.writer(csvfile, delimiter=',')
-#    csvwriter.writerow(["Financial Analysis"])
-#    csvwriter.writerow(["-------------------"])
-#    csvwriter.writerow([f'Total Months: {Total_Months}'])
-#    csvwriter.writerow([f'Total Net: ${Total_Net}'])
-#    csvwriter.writerow([f'Avg Revenue Changes: ${Revenue_Avg}'])
-#    csvwriter.writerow([f'Greatest Increase in Revenue: {Greatest_Increase[0]} (${Greatest_Increase[1]})'])
-#    csvwriter.writerow([f'Greatest Decrease in Revenue: {Greatest_Decrease[0]} (${Greatest_Decrease[1]})'])
+Results = os.path.join("..", "Results")
+#with open(Results, "w") as txt_file:
+    #txt_file.write(Output)
+    #csvwriter = csv.writer(csvfile, delimiter=',')
+
+Output = (
+        f"\nFinancial Analysis\n"
+        f"-------------------------------------\n"
+        f"Total Months: {Total_Months}\n"
+        f"Total Net: ${Total_Net}\n"
+        f"Avg Revenue Changes: ${Revenue_Avg}\n"
+        f"Greatest Increase in Revenue: {Greatest_Increase[0]} (${Greatest_Increase[1]})\n"
+        f"Greatest Decrease in Revenue: {Greatest_Decrease[0]} (${Greatest_Decrease[1]})\n")
+
+print(Output)
+
+
+with open(Results, "w") as txt_file:
+    txt_file.write(Output)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
