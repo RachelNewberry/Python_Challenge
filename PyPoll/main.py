@@ -3,7 +3,7 @@ import csv
 
 PyPollcsv = os.path.join(r"C:\Users\rache\OneDrive\Documents\School\John Hopkins\Session_3_Python\Python_Challenge\PyPoll\Resources", "election_data.csv")
 
-#Variables and Dictionaries 
+#Variables and  Dictionaries 
 total_votes = 0
 candidate_options = []
 candidate_votes = {}
